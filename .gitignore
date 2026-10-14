@@ -1,0 +1,17 @@
+# Environments and secrets
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# System generated and caches
+.system_generated/
+.DS_Store
+Thumbs.db
+*.log
+
+# Data persistence (optional: keep or ignore)
+sos_dispatches.json
+camp_attendees.json
+community_notices.json
