@@ -34,10 +34,21 @@ app.include_router(villages.router, prefix="/api")
 app.include_router(medicines.router, prefix="/api")
 
 import asyncio
+import logging
+from backend.config import get_settings
+from backend.demo_accounts import seed_demo_accounts
 from backend.ntfy_listener import run_ntfy_background_listener
+
+logger = logging.getLogger(__name__)
 
 @app.on_event("startup")
 async def start_background_workers():
+    if get_settings().ENABLE_DEMO_ACCOUNTS:
+        try:
+            await asyncio.to_thread(seed_demo_accounts)
+        except Exception as exc:
+            logger.warning("Demo account provisioning could not complete (%s).", type(exc).__name__)
+
     # Launch persistent real-time streaming listener for inbound ntfy patient messages, photos, and voice notes
     asyncio.create_task(run_ntfy_background_listener())
 

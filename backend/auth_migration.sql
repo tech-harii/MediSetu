@@ -53,7 +53,7 @@ ALTER TABLE volunteers ADD COLUMN IF NOT EXISTS organization_id UUID REFERENCES 
 INSERT INTO organizations (id, name, registration_no, contact_email, headquarters) VALUES
 ('88888888-8888-8888-8888-888888888801', 'PSG Rural Health & Social Medicine Cell', 'TN-NGO-2018-9128', 'contact@psgrural.org', 'Coimbatore & Valparai'),
 ('88888888-8888-8888-8888-888888888802', 'Lions Club Tribal Healthcare Wing', 'TN-TRUST-2012-4011', 'health@lionstribal.org', 'Salem & Kolli Hills')
-ON CONFLICT (id) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 -- 2. Seed Users with pre-hashed password "Password123"
 -- bcrypt hash for 'Password123': $2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW
@@ -69,5 +69,5 @@ INSERT INTO users (id, email, hashed_password, full_name, phone, role, organizat
 -- Delivery Volunteers affiliated with Organizations
 ('99999999-9999-9999-9999-999999999905', 'murugan@volunteer.org', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 'Murugan Velu', '+91 90000 00301', 'volunteer', '88888888-8888-8888-8888-888888888801', NULL, NULL, 'Valparai & Pollachi'),
 ('99999999-9999-9999-9999-999999999906', 'kavitha@volunteer.org', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 'Kavitha Selvam', '+91 90000 00302', 'volunteer', '88888888-8888-8888-8888-888888888802', NULL, NULL, 'Sathyamangalam Forest Edge')
-ON CONFLICT (id) DO NOTHING;
+ON CONFLICT DO NOTHING;
 
