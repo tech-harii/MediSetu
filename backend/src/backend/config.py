@@ -25,6 +25,7 @@ class Settings:
     LLM_API_KEY: str = os.getenv("LLM_API_KEY", "").strip()
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "").strip()
     TELEGRAM_BOT_TOKEN: str = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    ENABLE_DEMO_ACCOUNTS: bool = os.getenv("ENABLE_DEMO_ACCOUNTS", "false").strip().lower() in {"1", "true", "yes", "on"}
     VIDEO_CALL_BASE_URL: str = os.getenv("VIDEO_CALL_BASE_URL", "https://talky.io").strip().rstrip("/")
     ANDROID_GATEWAY_URL: str = os.getenv("ANDROID_GATEWAY_URL", "").strip()
     ANDROID_GATEWAY_USER: str = os.getenv("ANDROID_GATEWAY_USER", "").strip()

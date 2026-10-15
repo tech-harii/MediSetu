@@ -825,7 +825,9 @@ def run_bot():
     app.add_error_handler(global_error_handler)
 
     print("🤖 Telegram Bot is running smoothly! Press Ctrl+C to stop.")
-    app.run_polling(drop_pending_updates=True)
+    # Keep queued commands (especially /start) so a restart does not silently
+    # discard messages sent while the bot was offline.
+    app.run_polling(drop_pending_updates=False)
 
 if __name__ == "__main__":
     run_bot()

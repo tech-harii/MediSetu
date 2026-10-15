@@ -61,7 +61,32 @@
     .home-guide-heading h2 { margin: 0; color: #18362b; font: 800 clamp(21px, 2.7vw, 30px)/1.15 'Manrope', sans-serif; letter-spacing: -.045em; }
     .home-guide-heading p { margin: 5px 0 0; color: #64776b; font-size: 12px; line-height: 1.55; }
     .guide-panel.home-guide-inline { position: relative; inset: auto; z-index: auto; width: min(100%, 760px); height: 510px; margin: 0 auto; border-radius: 20px; box-shadow: 0 14px 36px rgb(13 35 28 / .11); animation: none; }
+    .telegram-qr-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 280px); align-items: center; gap: clamp(20px, 4vw, 54px); padding: clamp(20px, 4vw, 40px); border: 1px solid #e8dfc7; border-radius: 25px; background: radial-gradient(ellipse at 86% 46%, rgb(243 214 133 / .23), transparent 38%), linear-gradient(115deg, #fbf9f1, #f4efdf); box-shadow: 0 14px 36px rgb(58 68 40 / .07); }
+    .telegram-qr-copy { max-width: 650px; }
+    .telegram-qr-kicker { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 12px; color: #58724f; font-size: 10px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .telegram-qr-kicker::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #d9a93d; box-shadow: 0 0 0 4px rgb(217 169 61 / .16); }
+    .telegram-qr-copy h2 { margin: 0; color: #193b2b; font: 800 clamp(25px, 3vw, 38px)/1.12 'Manrope', sans-serif; letter-spacing: -.05em; }
+    .telegram-qr-copy p { max-width: 520px; margin: 12px 0 16px; color: #637365; font-size: 14px; line-height: 1.7; }
+    .telegram-qr-services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; max-width: 530px; margin: 0 0 22px; padding: 0; list-style: none; }
+    .telegram-qr-services li { display: flex; align-items: center; gap: 8px; min-width: 0; color: #365b43; font-size: 12px; font-weight: 650; }
+    .telegram-qr-services li::before { display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; color: #34734e; background: #e1ecd9; content: '✓'; font-size: 11px; font-weight: 800; }
+    .telegram-qr-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #d7e3d0; border-radius: 12px; color: #24533d; background: rgb(255 255 255 / .82); font-size: 12px; font-weight: 750; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .telegram-qr-link:hover, .telegram-qr-link:focus-visible { transform: translateY(-2px); border-color: #9ebc9e; box-shadow: 0 8px 18px rgb(36 71 46 / .1); outline: none; }
+    .telegram-qr-art { justify-self: end; width: min(100%, 280px); aspect-ratio: 1; padding: 12px; border: 1px solid #dce7d9; border-radius: 20px; background: #fff; box-shadow: 0 14px 28px rgb(57 67 42 / .13); }
+    .telegram-qr-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    body[data-theme="dark"] .telegram-qr-section { border-color: #424b35; background: radial-gradient(ellipse at 86% 46%, rgb(158 126 57 / .14), transparent 38%), linear-gradient(115deg, #1a2921, #252c22); box-shadow: 0 14px 36px rgb(0 0 0 / .18); }
+    body[data-theme="dark"] .telegram-qr-copy h2 { color: #edf5ee; }
+    body[data-theme="dark"] .telegram-qr-copy p { color: #b5c3b7; }
+    body[data-theme="dark"] .telegram-qr-services li { color: #c7d9cb; }
+    body[data-theme="dark"] .telegram-qr-services li::before { color: #cae4ce; background: #304a38; }
+    body[data-theme="dark"] .telegram-qr-kicker { color: #d2d9ae; }
+    body[data-theme="dark"] .telegram-qr-link { border-color: #405044; color: #d8ecdc; background: #25372c; }
+    @media (max-width: 760px) { .telegram-qr-section { grid-template-columns: 1fr; gap: 20px; } .telegram-qr-copy { margin: 0 auto; } .telegram-qr-art { justify-self: center; width: min(100%, 280px); } }
+    @media (max-width: 430px) { .telegram-qr-services { grid-template-columns: 1fr; gap: 8px; } }
     .care-orbit { justify-self: end; width: min(100%, 440px); min-height: 390px; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; color: white; border: 1px solid rgb(255 255 255 / .2); border-radius: 24px; background: radial-gradient(ellipse at 83% 14%, rgb(151 204 135 / .2), transparent 34%), linear-gradient(150deg, #173d32, #102b24); box-shadow: 0 25px 55px rgb(22 62 44 / .18); overflow: hidden; }
+    .care-orbit.care-poster { display: block; width: min(100%, 650px); min-height: 0; aspect-ratio: 16 / 9; padding: 0; border-color: #e7dfcb; border-radius: 22px; background: #f7f0de; box-shadow: 0 22px 48px rgb(48 65 39 / .16); animation: posterFloat 2.5s ease-in-out infinite; }
+    .care-poster-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+    @keyframes posterFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
     .network-card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .network-card-head span:first-child { color: #d5e6d8; font-size: 9px; font-weight: 800; letter-spacing: .16em; }
     .network-live { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border: 1px solid rgb(218 241 207 / .17); border-radius: 99px; color: #daedce; background: rgb(227 245 212 / .07); font-size: 9px; font-weight: 700; letter-spacing: .06em; }
@@ -100,10 +125,18 @@
     .workspace-slide-hint { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding: 9px 12px; border: 1px solid #e1e9df; border-radius: 999px; color: #426a51; background: #f6faf3; font-size: 10px; font-weight: 750; }
     .workspace-slide-art { display: grid; place-items: center; min-height: 205px; padding: 18px; border: 1px solid rgb(219 232 213 / .9); border-radius: 28px; background: linear-gradient(145deg, #f0f7eb, #e3f0df); box-shadow: inset 0 1px 0 #fff, 0 20px 38px rgb(33 71 49 / .08); transition: transform .32s ease; }
     .workspace-slide-art svg { width: min(100%, 280px); height: 190px; }
+    .workspace-clinical .workspace-slide-art { min-height: 0; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; background: #f7f0de; }
+    .workspace-clinical .workspace-slide-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .workspace-clinical .workspace-slide-art { background: linear-gradient(145deg, #e7f5e8, #d8eddf); }
     .workspace-emergency .workspace-slide-art { background: linear-gradient(145deg, #fff0e9, #fbe0d6); }
+    .workspace-emergency .workspace-slide-art { min-height: 0; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; background: #f7f0de; }
+    .workspace-emergency .workspace-slide-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .workspace-community .workspace-slide-art { background: linear-gradient(145deg, #fbf4df, #f1e7c4); }
+    .workspace-community .workspace-slide-art { min-height: 0; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; background: #f7f0de; }
+    .workspace-community .workspace-slide-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .workspace-delivery .workspace-slide-art { background: linear-gradient(145deg, #edf0ff, #e1e6fb); }
+    .workspace-delivery .workspace-slide-art { min-height: 0; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; background: #f7f0de; }
+    .workspace-delivery .workspace-slide-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .workspace-slide-action { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 25px clamp(23px, 5vw, 52px); padding: 12px 16px; border: 0; border-radius: 12px; color: #fff; background: #19785b; font-size: 11px; font-weight: 800; box-shadow: 0 8px 20px rgb(25 120 91 / .17); }
     .workspace-slide-action:hover { background: #12674d; transform: translateY(-2px); }
     .workspace-carousel-controls { display: flex; align-items: center; gap: 9px; }
@@ -158,6 +191,17 @@
     body[data-theme="dark"] #modal-auth > div, body[data-theme="dark"] #modal-prescribe > div, body[data-theme="dark"] #modal-add-member > div, body[data-theme="dark"] #modal-sos > div { color: #e7efe9; background: #18241e !important; }
     @media (prefers-reduced-motion: reduce) { .workspace-carousel-track { transition: none; } }
     #modal-auth > div, #modal-prescribe > div, #modal-add-member > div, #modal-sos > div { border: 1px solid rgb(255 255 255 / .75); border-radius: 22px !important; box-shadow: 0 26px 90px rgb(9 28 21 / .3) !important; }
+    .demo-account-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .demo-account-button { display: grid; gap: 4px; min-width: 0; padding: 10px; border: 1px solid #dce7dc; border-radius: 11px; color: #315640; background: #fbfdf9; text-align: left; transition: border-color .15s, background .15s, transform .15s; }
+    .demo-account-button:hover, .demo-account-button:focus-visible { border-color: #72a488; background: #f0f7ef; transform: translateY(-1px); outline: none; }
+    .demo-account-button span { font-size: 11px; font-weight: 750; }
+    .demo-account-button small { overflow: hidden; color: #708078; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+    .demo-account-hint { margin: 0; padding: 10px 12px; border-radius: 10px; color: #7c876f; background: #f7f8f1; font-size: 10px; line-height: 1.55; }
+    .demo-account-hint strong { color: #315640; }
+    body[data-theme="dark"] .demo-account-button { color: #d6ebd8; border-color: #3b5042; background: #202d26; }
+    body[data-theme="dark"] .demo-account-button small { color: #a8b9ae; }
+    body[data-theme="dark"] .demo-account-hint { color: #c7c2a2; background: #252519; }
+    body[data-theme="dark"] .demo-account-hint strong { color: #ecdf9d; }
     #tab-doctor > div:first-child, #tab-map > div:first-child, #tab-volunteer > div:first-child, #tab-ngo-portal > div:first-child { padding: 26px !important; border: 1px solid var(--line) !important; border-radius: 22px !important; background: linear-gradient(135deg, #fff 0%, #f8fbf6 100%) !important; box-shadow: 0 10px 30px rgb(20 42 37 / .045) !important; }
     #tab-doctor h2, #tab-map h2, #tab-volunteer h2, #tab-ngo-portal h2 { color: var(--ink) !important; font-family: 'Manrope', sans-serif; letter-spacing: -.045em; }
     #tab-radar > div:first-child { border: 1px solid #704147 !important; border-radius: 24px !important; background: radial-gradient(ellipse at 87% 7%, rgb(177 83 74 / .28), transparent 34%), linear-gradient(120deg, #202e2b, #362729) !important; box-shadow: 0 18px 44px rgb(60 39 38 / .13) !important; }
@@ -215,6 +259,9 @@
       #tab-landing h1 { font-size: clamp(48px, 4.4vw, 68px) !important; }
       .care-orbit { justify-self: end; width: min(100%, 470px); min-height: 400px; }
     }
+    @media (min-width: 1500px) {
+      #tab-landing > div:first-child { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+    }
     #tab-landing > div:nth-child(2) > div {
       background-image: linear-gradient(145deg, #fff 58%, #f5f9f1) !important;
       transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
@@ -230,6 +277,7 @@
       transform: rotate(-8deg);
       pointer-events: none;
     }
+    .care-orbit.care-poster::after { display: none; }
     .network-illustration { position: relative; z-index: 1; filter: drop-shadow(0 10px 18px rgb(0 0 0 / .08)); }
     @media (max-width: 640px) {
       .workspace-slide-select { grid-template-columns: 1fr; gap: 17px; min-height: 0; padding: 23px; }
@@ -283,7 +331,7 @@
     .guide-step-caption { color: #7b8980; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-align: center; text-transform: uppercase; white-space: nowrap; }
     .care-route-enter { animation: guideRouteIn .42s cubic-bezier(.2,.8,.2,1) both; }
     .guide-target-arrival { animation: guideTargetGlow 1.45s ease-out both; border-radius: 14px; }
-    @media (max-width: 480px) { .guide-launcher { right: 14px; bottom: 14px; } .guide-panel { right: 10px; bottom: 82px; height: min(580px, calc(100dvh - 104px)); } }
+    @media (max-width: 480px) { .guide-launcher { right: 14px; bottom: 14px; } .guide-panel { right: 10px; bottom: 82px; height: min(580px, calc(100dvh - 104px)); } .demo-account-list { grid-template-columns: 1fr; } }
     @media (max-width: 1100px) {
       #tab-landing > div:first-child { grid-template-columns: 1fr; }
       .care-orbit { justify-self: stretch; width: 100%; }
@@ -412,27 +460,8 @@
             </button>
           </div>
         </div>
-        <aside class="care-orbit" aria-label="How the care network works">
-          <div class="network-card-head"><span>RURAL CARE NETWORK</span><span class="network-live"><i aria-hidden="true"></i> HUMAN-LED</span></div>
-          <svg class="network-illustration" viewBox="0 0 440 270" role="img" aria-labelledby="network-illustration-title network-illustration-desc">
-            <title id="network-illustration-title">A connected rural care network</title>
-            <desc id="network-illustration-desc">A route links a village home, a clinician, and a local outreach camp.</desc>
-            <defs>
-              <linearGradient id="field-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c6e3a7" stop-opacity=".28"/><stop offset="1" stop-color="#8aba84" stop-opacity=".05"/></linearGradient>
-              <linearGradient id="route-stroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d1ef90"/><stop offset="1" stop-color="#f2d68e"/></linearGradient>
-            </defs>
-            <path d="M2 179c37-28 67-13 104-43 38-31 63-53 112-31 37 17 43 54 88 41 49-13 75-59 132-39v163H2z" fill="url(#field-fill)"/>
-            <path d="M0 209c52-31 77-6 124-31 35-19 68-32 101-13 39 21 59 28 96 9 45-23 67-36 119-24" fill="none" stroke="#c7e2c4" stroke-opacity=".17"/>
-            <path d="M0 231c52-31 77-6 124-31 35-19 68-32 101-13 39 21 59 28 96 9 45-23 67-36 119-24" fill="none" stroke="#c7e2c4" stroke-opacity=".12"/>
-            <path d="M62 181C108 153 136 185 180 139s76-48 112-8 50 26 89-26" fill="none" stroke="#092219" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/>
-            <path d="M62 178C108 150 136 182 180 136s76-48 112-8 50 26 89-26" fill="none" stroke="url(#route-stroke)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 8"/>
-            <g transform="translate(42 144)"><circle cx="20" cy="20" r="25" fill="#c5f36b" fill-opacity=".12"/><circle cx="20" cy="20" r="16" fill="#d7efaf"/><path d="M9 20 20 11l11 9v11H9z" fill="#225340"/><path d="M17 31v-8h6v8M17 17h6" fill="none" stroke="#e8f4dc" stroke-width="1.7" stroke-linecap="round"/></g>
-            <g transform="translate(160 88)"><circle cx="22" cy="22" r="31" fill="#b7d899" fill-opacity=".12"/><circle cx="22" cy="22" r="22" fill="#f7f8ed"/><circle cx="22" cy="17" r="7" fill="#bd7d5e"/><path d="M10 35c1-8 6-12 12-12s11 4 12 12" fill="#478b6b"/><path d="M16 17c0-6 3-9 7-9s7 3 7 8" fill="#193d31"/><path d="M20 25h4v7h-4zM18.5 26.5h7" stroke="#f7f8ed" stroke-width="1.5"/></g>
-            <g transform="translate(357 78)"><circle cx="22" cy="22" r="29" fill="#f2d68e" fill-opacity=".13"/><circle cx="22" cy="22" r="19" fill="#f4e6bd"/><path d="M10 20 22 10l12 10v13H10z" fill="#87692d"/><path d="M19 33v-8h6v8M20 19h4M22 17v4" fill="none" stroke="#fff8e6" stroke-width="1.8" stroke-linecap="round"/></g>
-            <g fill="#e9f3d5" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" letter-spacing="1.2"><text x="43" y="218">VILLAGE</text><text x="163" y="159">CLINICIAN</text><text x="350" y="140">OUTREACH</text></g>
-            <circle cx="62" cy="178" r="4" fill="#eff9c7"/><circle cx="180" cy="136" r="4" fill="#eff9c7"/><circle cx="381" cy="102" r="4" fill="#fff1c3"/>
-          </svg>
-          <div class="network-card-foot"><span class="network-stage"><b>01 · Listen</b>Patient intake</span><span class="network-stage"><b>02 · Review</b>Clinical care</span><span class="network-stage"><b>03 · Reach</b>Local outreach</span></div>
+        <aside class="care-orbit care-poster" aria-label="MediSetu community healthcare poster">
+          <img class="care-poster-image" src="/static/assets/medisetu-poster.png" alt="MediSetu — Care that reaches the last mile, showing a rural doctor and community in a village setting" fetchpriority="high">
         </aside>
       </div>
 
@@ -460,6 +489,26 @@
         </div>
       </div>
 
+      <section class="telegram-qr-section" aria-labelledby="telegram-qr-title">
+        <div class="telegram-qr-copy">
+          <span class="telegram-qr-kicker">MediSetu on Telegram</span>
+          <h2 id="telegram-qr-title">Scan to get care.</h2>
+          <p>Chat with MediSetu on Telegram for support across your local care network.</p>
+          <ul class="telegram-qr-services" aria-label="Available support">
+            <li>Doctor consultations</li>
+            <li>Medicine delivery</li>
+            <li>Village health updates</li>
+            <li>Emergency support</li>
+          </ul>
+          <a class="telegram-qr-link" href="https://t.me/MediHelp007_Bot" target="_blank" rel="noopener noreferrer">
+            Chat with MediSetu on Telegram <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="telegram-qr-art">
+          <img src="/static/assets/medisetu-telegram-qr-code.png" alt="MediSetu Telegram QR code. Scan to chat and get care." width="720" height="720" loading="lazy" decoding="async">
+        </div>
+      </section>
+
       <section id="home-guide-section" class="home-guide-section" aria-labelledby="home-guide-title">
         <div class="home-guide-heading">
           <span class="home-guide-robot" aria-hidden="true">🤖</span>
@@ -486,28 +535,28 @@
               <article class="workspace-slide workspace-clinical" data-sector="Clinical team">
                 <button class="workspace-slide-select" type="button" onclick="moveWorkspaceSlide(1)" aria-label="Clinical team selected. Click to see the next care sector.">
                   <span class="workspace-slide-copy"><span class="workspace-slide-kicker">01 · CLINICAL TEAM</span><strong>Review patient cases</strong><p>Prioritized consultations, secure calls, and clinician-led prescriptions.</p><span class="workspace-slide-hint">View next sector <span aria-hidden="true">→</span></span></span>
-                  <span class="workspace-slide-art"><svg viewBox="0 0 280 190" role="img" aria-label="Doctor reviewing a patient care chart"><path d="M30 151h220" stroke="#8fb59b" stroke-width="3" stroke-linecap="round"/><rect x="151" y="29" width="91" height="108" rx="15" fill="#fff"/><rect x="164" y="44" width="65" height="9" rx="4.5" fill="#dceee0"/><rect x="164" y="64" width="43" height="7" rx="3.5" fill="#ecf2eb"/><rect x="164" y="80" width="56" height="7" rx="3.5" fill="#ecf2eb"/><circle cx="211" cy="111" r="13" fill="#e4f3dc"/><path d="M205 111h12m-6-6v12" stroke="#26734f" stroke-width="3" stroke-linecap="round"/><circle cx="91" cy="71" r="24" fill="#f5cba7"/><path d="M66 69c1-21 13-33 28-33 17 0 28 11 28 30-10-2-17-7-22-14-7 10-19 15-34 17Z" fill="#25483a"/><path d="M48 150c3-34 18-52 43-52s41 18 44 52" fill="#438b68"/><path d="M82 105h18l-4 17h-10z" fill="#fff"/><path d="M91 116v21m-8-12h16" stroke="#e7f3e9" stroke-width="3" stroke-linecap="round"/><path d="M117 110c15 0 24 7 31 17" fill="none" stroke="#88b99a" stroke-width="3" stroke-linecap="round"/></svg></span>
+                  <span class="workspace-slide-art"><img src="/static/assets/rural-healthcare-team-reviewing-patient-records.png" alt="Rural healthcare team reviewing patient records together in a village setting" loading="eager" decoding="async"></span>
                 </button>
                 <button class="workspace-slide-action" type="button" onclick="handleHeroDoctorClick()">Open doctor workspace <span aria-hidden="true">↗</span></button>
               </article>
               <article class="workspace-slide workspace-emergency" data-sector="Emergency response">
                 <button class="workspace-slide-select" type="button" onclick="moveWorkspaceSlide(1)" aria-label="Emergency response selected. Click to see the next care sector.">
                   <span class="workspace-slide-copy"><span class="workspace-slide-kicker">02 · EMERGENCY RESPONSE</span><strong>Coordinate a response</strong><p>Review emergency dispatch details and low-bandwidth SMS support from one place.</p><span class="workspace-slide-hint">View next sector <span aria-hidden="true">→</span></span></span>
-                  <span class="workspace-slide-art"><svg viewBox="0 0 280 190" role="img" aria-label="Emergency response vehicle and first-aid symbol"><path d="M34 150h210" stroke="#c7a49a" stroke-width="3" stroke-linecap="round"/><path d="M59 89h112a12 12 0 0 1 12 12v42H47v-42a12 12 0 0 1 12-12Z" fill="#fff"/><path d="M183 111h30l25 25v7h-55z" fill="#f5c9bc"/><path d="M186 116h22l16 17h-38z" fill="#e8f2ed"/><circle cx="83" cy="146" r="14" fill="#29473a"/><circle cx="83" cy="146" r="6" fill="#fff"/><circle cx="210" cy="146" r="14" fill="#29473a"/><circle cx="210" cy="146" r="6" fill="#fff"/><rect x="93" y="99" width="42" height="34" rx="8" fill="#c9493d"/><path d="M114 106v20m-10-10h20" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M73 78c8-18 25-28 42-28" fill="none" stroke="#d97a67" stroke-width="4" stroke-linecap="round"/><circle cx="218" cy="62" r="25" fill="#fff"/><path d="M218 49v26m-13-13h26" stroke="#ca5142" stroke-width="6" stroke-linecap="round"/></svg></span>
+                  <span class="workspace-slide-art"><img src="/static/assets/connected-rural-healthcare-community.png" alt="A rural doctor, community health worker, patient, and volunteer coordinating care in a village" loading="lazy" decoding="async"></span>
                 </button>
                 <button class="workspace-slide-action" type="button" onclick="switchTab('sos')">Open response console <span aria-hidden="true">↗</span></button>
               </article>
               <article class="workspace-slide workspace-community" data-sector="Community health">
                 <button class="workspace-slide-select" type="button" onclick="moveWorkspaceSlide(1)" aria-label="Community health selected. Click to see the next care sector.">
                   <span class="workspace-slide-copy"><span class="workspace-slide-kicker">03 · COMMUNITY HEALTH</span><strong>Explore villages & camps</strong><p>See outreach locations, upcoming camps, and local health signals across the community.</p><span class="workspace-slide-hint">View next sector <span aria-hidden="true">→</span></span></span>
-                  <span class="workspace-slide-art"><svg viewBox="0 0 280 190" role="img" aria-label="Map connecting rural villages and a mobile health camp"><path d="M30 150c33-44 64-46 98-18 29 24 55 25 83-6 14-16 26-26 42-26" fill="none" stroke="#9aac6b" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/><path d="M30 150h220" stroke="#cabb8b" stroke-width="3" stroke-linecap="round"/><circle cx="63" cy="122" r="27" fill="#fff"/><path d="M47 123 63 110l16 13v16H47z" fill="#b68c35"/><path d="M59 139v-11h8v11" fill="none" stroke="#fff4d3" stroke-width="2"/><circle cx="154" cy="91" r="32" fill="#f8ffff"/><path d="m131 91 23-19 23 19v24h-46z" fill="#548b68"/><path d="M148 115V99h12v16m-13-21h13" fill="none" stroke="#fff" stroke-width="3"/><circle cx="226" cy="76" r="25" fill="#fff"/><path d="M214 70h24v17h-24z" fill="#d29343"/><path d="M219 65v10m14-10v10m-8 12v-7h5v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="63" cy="122" r="38" fill="none" stroke="#c7a959" stroke-opacity=".25" stroke-width="2"/><circle cx="154" cy="91" r="43" fill="none" stroke="#5a9972" stroke-opacity=".2" stroke-width="2"/></svg></span>
+                  <span class="workspace-slide-art"><img src="/static/assets/rural-village-medical-camp.png" alt="A rural village medical camp where a clinician examines a patient while community health workers welcome local families" loading="lazy" decoding="async"></span>
                 </button>
                 <button class="workspace-slide-action" type="button" onclick="switchTab('map')">Explore villages & camps <span aria-hidden="true">↗</span></button>
               </article>
               <article class="workspace-slide workspace-delivery" data-sector="Local outreach">
                 <button class="workspace-slide-select" type="button" onclick="moveWorkspaceSlide(1)" aria-label="Local outreach selected. Click to see the next care sector.">
                   <span class="workspace-slide-copy"><span class="workspace-slide-kicker">04 · LOCAL OUTREACH</span><strong>Support medicine delivery</strong><p>Verified volunteers coordinate pharmacy pickup and confirmed handover to patients.</p><span class="workspace-slide-hint">View next sector <span aria-hidden="true">→</span></span></span>
-                  <span class="workspace-slide-art"><svg viewBox="0 0 280 190" role="img" aria-label="Volunteer carrying a medicine delivery bag"><path d="M32 151h216" stroke="#9ea8ce" stroke-width="3" stroke-linecap="round"/><circle cx="111" cy="59" r="22" fill="#f1c6a3"/><path d="M89 58c1-18 11-29 25-29 13 0 21 9 21 25-11-1-19-7-24-13-4 9-11 14-22 17Z" fill="#2d4357"/><path d="M78 151c3-44 14-69 34-69 20 0 31 25 34 69" fill="#7180c4"/><path d="M99 89h27l-4 17h-19z" fill="#f5f7ff"/><path d="M112 101v26m-10-13h20" stroke="#7180c4" stroke-width="3" stroke-linecap="round"/><path d="M155 99h59v45h-59z" rx="9" fill="#e7b94f"/><path d="M155 112h59v32h-59z" fill="#d7a63d"/><path d="M171 99v-8c0-10 6-16 14-16s14 6 14 16v8" fill="none" stroke="#a87b2d" stroke-width="5"/><path d="M185 117v19m-9-9h18" stroke="#fff8e8" stroke-width="5" stroke-linecap="round"/><circle cx="228" cy="54" r="20" fill="#fff"/><path d="m219 54 6 6 12-13" fill="none" stroke="#5a8d68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="workspace-slide-art"><img src="/static/assets/village-healthcare-visit.png" alt="A volunteer doctor handing medicine to an older woman outside her village home" loading="lazy" decoding="async"></span>
                 </button>
                 <button class="workspace-slide-action" type="button" onclick="openAuthModal('login')">Volunteer sign in <span aria-hidden="true">↗</span></button>
               </article>
@@ -610,6 +659,11 @@
           <p class="text-sm text-slate-500">Live priority queue sorted by urgency (Emergency Red first). Click to examine and call patients.</p>
         </div>
         <div class="flex flex-wrap items-center gap-3">
+          <label class="relative block w-full sm:w-56 lg:w-64">
+            <span class="sr-only">Search doctor dashboard cases</span>
+            <svg aria-hidden="true" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <input id="doctor-search" type="search" oninput="renderConsultations()" placeholder="Search patients or cases" aria-controls="consultations-container" class="w-full border border-slate-300 rounded-lg text-xs pl-9 pr-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500">
+          </label>
           <!-- Queue Status Toggle: Active vs Completed -->
           <div class="inline-flex rounded-lg border border-slate-300 p-0.5 bg-slate-100 text-xs font-semibold">
             <button onclick="setQueueStatusFilter('active')" id="btn-filter-active" class="px-3 py-1.5 rounded-md bg-white text-slate-900 shadow-xs font-bold">
@@ -1207,7 +1261,7 @@
   <!-- MODAL: AUTHENTICATION (SIGN IN & REGISTER NGO) -->
   <!-- ============================================================== -->
   <div id="modal-auth" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-4">
       <div class="flex items-center justify-between border-b border-slate-100 pb-3">
         <div>
           <h3 class="text-lg font-bold text-slate-900" id="auth-modal-title">Sign In</h3>
@@ -1231,10 +1285,14 @@
             Sign In to Platform
           </button>
         </div>
-        <div class="text-center pt-2 border-t border-slate-100 text-slate-500">
-          Demo: Use <button type="button" onclick="fillDemoCredentials('doctor.sundar@psgrural.org')" class="text-emerald-600 underline font-semibold">Doctor</button>, 
-          <button type="button" onclick="fillDemoCredentials('lead@psgrural.org')" class="text-emerald-600 underline font-semibold">NGO Lead</button>, or 
-          <button type="button" onclick="fillDemoCredentials('murugan@volunteer.org')" class="text-emerald-600 underline font-semibold">Volunteer</button>
+        <div class="space-y-2 pt-1">
+          <div class="font-semibold text-slate-600">Try a sample account</div>
+          <div class="demo-account-list">
+            <button type="button" onclick="fillDemoCredentials('doctor.sundar@psgrural.org')" class="demo-account-button"><span>Doctor</span><small>doctor.sundar@psgrural.org</small></button>
+            <button type="button" onclick="fillDemoCredentials('lead@psgrural.org')" class="demo-account-button"><span>NGO Lead</span><small>lead@psgrural.org</small></button>
+            <button type="button" onclick="fillDemoCredentials('murugan@volunteer.org')" class="demo-account-button"><span>Volunteer</span><small>murugan@volunteer.org</small></button>
+          </div>
+          <p class="demo-account-hint">Shared demo password: <strong>Password123</strong>. Missing demo accounts are added when the server starts.</p>
         </div>
       </form>
 
@@ -2928,6 +2986,7 @@
     function renderConsultations() {
       const container = document.getElementById('consultations-container');
       const urgencyFilter = document.getElementById('filter-urgency').value;
+      const searchQuery = (document.getElementById('doctor-search')?.value || '').trim().toLowerCase();
 
       // Update counters
       const activeCases = state.consultations.filter(c => c.status !== 'completed');
@@ -2948,12 +3007,25 @@
         list = list.filter(c => c.urgency === urgencyFilter);
       }
 
+      if (searchQuery) {
+        list = list.filter(c => {
+          const patient = c.patient || {};
+          const searchableText = [
+            patient.name, patient.village_name, patient.city, patient.phone,
+            c.patient_name, c.patient_phone, c.village_name, c.symptom_summary,
+            c.status, c.urgency
+          ].filter(value => value != null).join(' ').toLowerCase();
+          return searchableText.includes(searchQuery);
+        });
+      }
+
       if (list.length === 0) {
+        const hasSearch = searchQuery.length > 0;
         container.innerHTML = `
           <div class="p-12 text-center bg-white rounded-2xl border border-slate-200 text-slate-500 space-y-2">
-            <div class="text-3xl">${queueStatusFilter === 'active' ? '🎉' : '📋'}</div>
-            <div class="font-bold text-slate-800 text-base">${queueStatusFilter === 'active' ? 'All caught up!' : 'No completed cases yet.'}</div>
-            <div class="text-xs text-slate-400">${queueStatusFilter === 'active' ? 'No pending patient consultations in the active triage queue.' : 'Cases you mark Done will appear here for record review.'}</div>
+            <div class="text-3xl">${hasSearch ? '🔎' : (queueStatusFilter === 'active' ? '🎉' : '📋')}</div>
+            <div class="font-bold text-slate-800 text-base">${hasSearch ? 'No matching cases found.' : (queueStatusFilter === 'active' ? 'All caught up!' : 'No completed cases yet.')}</div>
+            <div class="text-xs text-slate-400">${hasSearch ? 'Try a patient name, village, phone number, or symptom.' : (queueStatusFilter === 'active' ? 'No pending patient consultations in the active triage queue.' : 'Cases you mark Done will appear here for record review.')}</div>
           </div>
         `;
         return;
